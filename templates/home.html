@@ -8,11 +8,13 @@
     let data = {{data|tojson}}
 
     $(document).ready(function() {
+        $("#content").append("<ul id='itemlist'>")
         $.each(data, function(i, item) {
-            let html_item = $("<div class='top_item'>")
+            let html_item = $("<li class='top_item'>")
             $(html_item).text(item["title"])
-            $("#content").append(html_item)
+            $("#itemlist").append(html_item)
         })
+        $("#content").append("</ul>")
     });
 </script>
 
