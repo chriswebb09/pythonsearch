@@ -10,7 +10,7 @@ data = {
         "podcast_name": "In Moscow's Shadows",
         "id": 1,
         "date": "02/27/2022",
-        "url": "https://www.buzzsprout.com/1026985/10152168-in-moscow-s-shadows-60-ukraine-nuclear-options-national-morale-and-how-kyiv-can-save-moscow",
+        "url": "https://www.buzzsprout.com/1026985/10152168-in-moscow-s-shadows-60-ukraine-nuclear-options-national-morale-and-how-kyiv-can-save-moscow.mp3",
         "related_episodes": ["https://www.buzzsprout.com/1026985/10107958-in-moscow-s-shadows-59-imagining-a-ukrainian-peace-deal", "https://www.buzzsprout.com/1026985/10070465-in-moscow-s-shadows-58-ukrainian-thoughts-welcome-to-stagnation-and-more-2022-predictions"]
     },
     "2": {
@@ -19,7 +19,7 @@ data = {
         "podcast_name": "Doomsday Watch with Arthur Snell",
         "id": 2,
         "date": "11/23/2021",
-        "url": "https://podcasts.google.com/feed/aHR0cHM6Ly9mZWVkcy5tZWdhcGhvbmUuZm0vZG9vbXNkYXl3YXRjaA/episode/YWQ5YTkwMWUtNDZjZi0xMWVjLTkzYWEtNGY0MzVmYWFjMjhi?sa=X&ved=0CAUQkfYCahcKEwiYxaCn8bX2AhUAAAAAHQAAAAAQCg&hl=en",
+        "url": "https://traffic.megaphone.fm/PMO1944155127.mp3?updated=1637063647",
         "related_episodes": ["https://www.buzzsprout.com/1026985/10107958-in-moscow-s-shadows-59-imagining-a-ukrainian-peace-deal", "https://www.buzzsprout.com/1026985/10070465-in-moscow-s-shadows-58-ukrainian-thoughts-welcome-to-stagnation-and-more-2022-predictions"]
     },
     "3": {
@@ -28,7 +28,7 @@ data = {
         "podcast_name": "The Weeds",
         "id": 3,
         "date": "02/6/2022",
-        "url": "https://open.spotify.com/episode/4MDiImcnFuE8xbOdmjoB7L?go=1&sp_cid=50e62089aedddad9df281fa05b647427&utm_source=embed_player_p&utm_medium=desktop&nd=1",
+        "url": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/chtbl.com/track/524GE/traffic.megaphone.fm/VMP8280337054.mp3",
         "related_episodes": ["https://www.buzzsprout.com/1026985/10107958-in-moscow-s-shadows-59-imagining-a-ukrainian-peace-deal", "https://www.buzzsprout.com/1026985/10070465-in-moscow-s-shadows-58-ukrainian-thoughts-welcome-to-stagnation-and-more-2022-predictions"]
     }
 }
