@@ -2,6 +2,16 @@
 
 {% block content %}
 
-<b>Welcome!</b>
+<div id="content"></div>
+
+<script>
+    let data = {{data|tojson}}
+
+    $(document).ready(function() {
+        let html_item = $("<div class='item'>")
+        $(html_item).text(data["title"])
+        $("#content").append(html_item)
+    });
+</script>
 
 {% endblock %}
