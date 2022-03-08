@@ -45,7 +45,8 @@ def detail(id=None):
 
 @app.route('/search/<term>')
 def search(term: None):
-    return render_template('search.html')
+    print("here")
+    return render_template('search.html', data=data, search=term)
 
 if __name__ == '__main__':
     app.run(debug = True)
