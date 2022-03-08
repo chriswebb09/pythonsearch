@@ -12,7 +12,11 @@ let data = {{ data|tojson }}
 
 $(document).ready(function() {
     $("#content").append("<ul id='itemlist'>")
-        $.each(data, function(i, item) {
+        if (!data || data.length == 0) {
+            let html_item = $("<h2>No Results</h2>");
+            $("#content").append(html_item)
+        } else {
+            $.each(data, function(i, item) {
             let html_item = $("<li class='top_item'>")
             $(html_item).text(item["title"])
             $(html_item).click(function() {
@@ -21,6 +25,7 @@ $(document).ready(function() {
             $("#itemlist").append(html_item)
         })
         $("#content").append("</ul>")
+        }
     });
 </script>
 

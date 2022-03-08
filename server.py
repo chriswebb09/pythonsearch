@@ -1,6 +1,7 @@
 from flask import Flask
 from flask import render_template
 from flask import Response, request, jsonify
+import re
 app = Flask(__name__)
 
 data = {
@@ -38,7 +39,11 @@ data = {
 def search_data(term):
     results = []
     for (key, item) in data.items():
-        if term in item["title"]:
+        title = item["title"].lower()
+        title = re.sub('[!,*)@#%(&$_?.^]', '', title)
+        print(title)
+        print(term)
+        if term in title:
             results.append(item)
     return results
 
@@ -54,6 +59,7 @@ def detail(id=None):
 
 @app.route('/search/<term>')
 def search(term: None):
+    term = re.sub('[!,*)@#%(&$_?.^]', '', term)
     results = search_data(term)
     print(results)
     return render_template('search.html', data=results, search=term)
