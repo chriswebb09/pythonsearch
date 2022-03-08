@@ -34,6 +34,16 @@ data = {
         "date": "02/6/2022",
         "url": "https://www.podtrac.com/pts/redirect.mp3/pdst.fm/e/chtbl.com/track/524GE/traffic.megaphone.fm/VMP8280337054.mp3",
         "related_episodes": ["https://www.buzzsprout.com/1026985/10107958-in-moscow-s-shadows-59-imagining-a-ukrainian-peace-deal", "https://www.buzzsprout.com/1026985/10070465-in-moscow-s-shadows-58-ukrainian-thoughts-welcome-to-stagnation-and-more-2022-predictions"]
+    },
+    "4": {
+        "title": "11 DAYS IN: RUSSIA’S INVASION STUMBLES FORWARD",
+        "description": "Russia bungled its invasion plan but is nonetheless making progress in the face of fierce Ukrainian resistance. But can the Russian military stay combat effective? What lessons can we learn from the war so far? What role is urban warfare playing in this fight? What do the troubles faced by the Russian military and security services in Ukraine portend for the regime of Vladimir Putin? And what exactly is going on with that long column of Russian forces north of Kyiv? In our last episode, Michael Kofman sat down with Ryan to break down the first few days of the war. In this episode, he brings us up to speed and breaks down the state-of-play.",
+        "podcast_name": "War On The Rocks",
+        "episode_link": "https://warontherocks.com/2022/03/11-days-in-russias-invasion-stumbles-forward/",
+        "id": 4,
+        "date": "03/07/2022",
+        "url": "https://content.libsyn.com/p/d/3/f/d3f658815750cbd4/WOTR_March_7.mp3",
+        "related_episodes": ["https://www.buzzsprout.com/1026985/10107958-in-moscow-s-shadows-59-imagining-a-ukrainian-peace-deal", "https://www.buzzsprout.com/1026985/10070465-in-moscow-s-shadows-58-ukrainian-thoughts-welcome-to-stagnation-and-more-2022-predictions"]
     }
 }
 
@@ -44,8 +54,6 @@ def search_data(term):
     for (key, item) in data.items():
         title = item["title"].lower()
         title = re.sub('[!,*)@#%(&$_?.^]', '', title)
-        print(title)
-        print(term)
         if term in title:
             results.append(item)
     return results
@@ -62,9 +70,9 @@ def detail(id=None):
 
 @app.route('/search/<term>')
 def search(term: None):
-    term = re.sub('[!,*)@#%(&$_?.^]', '', term)
-    results = search_data(term)
-    print(results)
+    search_term = re.sub('[!,*)@#%(&$_?.^]', '', term)
+    results = search_data(search_term)
+    print(term)
     return render_template('search.html', data=results, search=term)
 
 if __name__ == '__main__':

@@ -27,9 +27,18 @@ li {
      margin-top: 40px;
  }
 
+ #content h3 {
+    margin-top: 40px;
+}
+
 .item_description {
     margin-top: 35px;
     margin-bottom: 80px;
+}
+
+.item_date {
+    margin-top: 10px;
+    margin-bottom: 5px;
 }
 
 .top_item {
@@ -48,3 +57,8 @@ li {
     color: white;
     border: none;
 }
+
+a {
+    font-weight: bold;
+}
+
