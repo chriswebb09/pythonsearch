@@ -30,14 +30,15 @@ data = [
         "url": "https://www.buzzsprout.com/1026985/10152168-in-moscow-s-shadows-60-ukraine-nuclear-options-national-morale-and-how-kyiv-can-save-moscow",
         "recent_episodes": ["https://www.buzzsprout.com/1026985/10107958-in-moscow-s-shadows-59-imagining-a-ukrainian-peace-deal", "https://www.buzzsprout.com/1026985/10070465-in-moscow-s-shadows-58-ukrainian-thoughts-welcome-to-stagnation-and-more-2022-predictions"],
         "podcast_id": 3
-    },
+    }
 ]
 
 # ROUTES
 
 @app.route('/')
-def hello_world():
-   return render_template('welcome.html')
+def home():
+    display = [data[0], data[1], data[2]]
+    return render_template('home.html', data=display)
 
 @app.route('/details/<id>')
 def details(id=None):

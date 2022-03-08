@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<div id="content"></div>
+
+<script>
+    let data = {{data|tojson}}
+
+    $(document).ready(function() {
+        $.each(data, function(i, item) {
+            let html_item = $("<div class='top_item'>")
+            $(html_item).text(item["title"])
+            $("#content").append(html_item)
+        })
+    });
+</script>
+
+{% endblock %}
