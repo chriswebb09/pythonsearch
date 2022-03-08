@@ -7,7 +7,9 @@
 <div id="content"></div>
 
 <script>
-let data = {{data|tojson}}
+
+let data = {{ data|tojson }}
+
 $(document).ready(function() {
     $("#content").append("<ul id='itemlist'>")
         $.each(data, function(i, item) {
@@ -21,9 +23,5 @@ $(document).ready(function() {
         $("#content").append("</ul>")
     });
 </script>
-
-
-
-
 
 {% endblock %}

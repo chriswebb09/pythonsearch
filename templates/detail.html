@@ -8,9 +8,15 @@
     let data = {{data|tojson}}
 
     $(document).ready(function() {
-        let html_item = $("<div class='item'>")
-        $(html_item).text(data["title"])
-        $("#content").append(html_item)
+        let html_item_title = $("<div class='item_title'>")
+        $(html_item_title).text(data["title"])
+
+        let html_item_description = $("<div class='item_description'>")
+        $(html_item_description).text(data["description"])
+        
+        $("#content").append(html_item_title)
+        $("#content").append(html_item_description)
+
     });
 </script>
 
