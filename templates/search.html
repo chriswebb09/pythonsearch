@@ -3,7 +3,6 @@
 {% block content %}
 
 <h2 id="results_header">Search results for:</h2>
-
 <div id="content"></div>
 
 <script>
@@ -23,8 +22,8 @@ $(document).ready(function() {
                     window.location.assign("/detail/" + item["id"]);
                 })
                 $("#itemlist").append(html_item)
-        })
-        $("#content").append("</ul>")
+            })
+            $("#content").append("</ul>")
         }
     });
 </script>

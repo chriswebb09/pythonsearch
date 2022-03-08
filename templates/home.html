@@ -7,18 +7,19 @@
 
 <script>
     let data = {{ data|tojson }}
-
     $(document).ready(function() {
-        $("#content").append("<ul id='itemlist'>")
+        $("#content").append("<ul id='itemlist'>");
         $.each(data, function(i, item) {
-            let html_item = $("<li class='top_item'>")
-            $(html_item).text(item["title"])
+            let html_item = $("<li class='top_item'>");
+            let title = item["title"];
+            let id = item["id"];
+            $(html_item).text(title);
             $(html_item).click(function() {
-                window.location.assign("/detail/" + item["id"]);
-            })
-            $("#itemlist").append(html_item)
+                window.location.assign("/detail/" + id);
+            });
+            $("#itemlist").append(html_item);
         })
-        $("#content").append("</ul>")
+        $("#content").append("</ul>");
     });
 </script>
 
